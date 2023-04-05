@@ -1,0 +1,9 @@
+1. The individual handler function for each exception and interrupt is implemented since the exceptions need to be seperate from one another. It prevents collisions and logic errors by allowing each exception to have its one handler.
+
+2. The user/softint program behaved correctly because the kernel is the deciding factor in the exception, the user program cannot decide which one to call.
+
+3. The break point test case is dependent on the privledge level we decide  for it. The specific dpl required for it to work as specified is 3, while 0 will generate a general protection fault.
+
+4. These are in place to protect from the user.
+
+5. -Exercise 9- The page fault is triggered by the kernel failing to access memory
